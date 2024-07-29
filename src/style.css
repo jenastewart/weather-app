@@ -1,0 +1,26 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: linear-gradient(
+    to left,
+    #7973fb,
+    #747af8,
+    #7181f4,
+    #6f87f0,
+    #708ceb,
+    #6e8ae9,
+    #6b89e8,
+    #6987e6,
+    #637fe7,
+    #5e76e8,
+    #5a6de8,
+    #5863e8
+  );
+}
+.weather-app {
+  background: #919ff8;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  color: #5356ea;
+  border-radius: 20px;
+}

@@ -3,75 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
   <body>
-    <header><h1>Weather App</h1></header>
-    <main>
-      <form>
-        <input type="search" placeholder="Enter a city" required />
-        <input type="submit" value="Search" />
-      </form>
-      <div>
-        <p>
-          Portland <br />
-          Mon <br />
-          12:34 <br />
-          29 Jul 2024 <br />
-          ☁️ <br />
-          cloudy <br />
-          27° <br />
-          H: 28 L: 23 <br />
-          Humidity: 53%, Wind: 2.57km/h
-        </p>
-      </div>
-      <div id="tomorrow">
-        <div>⛅</div>
-        <div>Tomorrow 19° / 17 Partly Cloudy</div>
-      </div>
-      <div>
-        <div>Tues ⛅ Partly Cloudy 19° / 16</div>
-      </div>
-      <div>
-        <div>Wed ⛅ Partly Cloudy 19° / 16</div>
-      </div>
-      <div>
-        <div>Thurs ⛅ Partly Cloudy 19° / 16</div>
-      </div>
-      <div>
-        <div>Fri ⛅ Partly Cloudy 19° / 16</div>
-      </div>
-      <div>
-        <div>Sat ⛅ Partly Cloudy 19° / 16</div>
-      </div>
-      <div>
-        <div>Sun ⛅ Partly Cloudy 19° / 16</div>
-      </div>
-      <div>
-        <div>Mon ⛅ Partly Cloudy 19° / 16</div>
-      </div>
-      <div>
-        <div>Tues ⛅ Partly Cloudy 19° / 16</div>
-      </div>
-    </main>
+    <div class="weather-app">
+      <header><h1>Weather App</h1></header>
+      <main>
+        <form>
+          <input type="search" placeholder="Enter a city" required />
+          <input type="submit" value="Search" />
+        </form>
+        <div>
+          <p>
+            Portland <br />
+            Mon <br />
+            12:34 <br />
+            29 Jul 2024 <br />
+            ☁️ <br />
+            cloudy <br />
+            27° <br />
+            H: 28 L: 23 <br />
+            Humidity: 53%, Wind: 2.57km/h
+          </p>
+        </div>
+        <div id="tomorrow">
+          <div>⛅</div>
+          <div>
+            Tomorrow <br />
+            19° / 17 <br />
+            Partly Cloudy
+          </div>
+        </div>
+        <div>
+          <div>Tues ⛅ Partly Cloudy 19° / 16</div>
+        </div>
+        <div>
+          <div>Wed ⛅ Partly Cloudy 19° / 16</div>
+        </div>
+        <div>
+          <div>Thurs ⛅ Partly Cloudy 19° / 16</div>
+        </div>
+        <div>
+          <div>Fri ⛅ Partly Cloudy 19° / 16</div>
+        </div>
+        <div>
+          <div>Sat ⛅ Partly Cloudy 19° / 16</div>
+        </div>
+        <div>
+          <div>Sun ⛅ Partly Cloudy 19° / 16</div>
+        </div>
+        <div>
+          <div>Mon ⛅ Partly Cloudy 19° / 16</div>
+        </div>
+        <div>
+          <div>Tues ⛅ Partly Cloudy 19° / 16</div>
+        </div>
+      </main>
 
-    <footer>
-      <p>
-        This project was coded by
-        <a href="https://github.com/jenastewart" target="_blank"
-          >Jena Stewart</a
-        >
-        and is on
-        <a href="https://github.com/jenastewart/weather-app" target="_blank"
-          >GitHub</a
-        >
-        and hosted on
-        <a href="https://jenas-weather-app.netlify.app/" target="_blank"
-          >Netlify</a
-        >
-      </p>
-    </footer>
+      <footer>
+        <p>
+          This project was coded by
+          <a href="https://github.com/jenastewart" target="_blank"
+            >Jena Stewart</a
+          >
+          and is on
+          <a href="https://github.com/jenastewart/weather-app" target="_blank"
+            >GitHub</a
+          >
+          and hosted on
+          <a href="https://jenas-weather-app.netlify.app/" target="_blank"
+            >Netlify</a
+          >
+        </p>
+      </footer>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
