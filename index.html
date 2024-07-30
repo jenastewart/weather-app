@@ -14,56 +14,114 @@
   </head>
   <body>
     <div class="weather-app">
-      <header><h1>Weather App</h1></header>
-      <main>
-        <form>
-          <input type="search" placeholder="Enter a city" required />
-          <input type="submit" value="Search" />
+      <header>
+        <h1>Weather App</h1>
+
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city"
+            required
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
         </form>
-        <div>
-          <p>
-            Portland <br />
-            Mon <br />
-            12:34 <br />
-            29 Jul 2024 <br />
-            ☁️ <br />
-            cloudy <br />
-            27° <br />
-            H: 28 L: 23 <br />
-            Humidity: 53%, Wind: 2.57km/h
-          </p>
-        </div>
-        <div id="tomorrow">
-          <div>⛅</div>
-          <div>
-            Tomorrow <br />
-            19° / 17 <br />
-            Partly Cloudy
+      </header>
+      <main>
+        <div class="weather-data">
+          <div class="current-weather">
+            <div class="current-city">Portland</div>
+            <div class="current-day">Monday</div>
+            <div class="current-date">29 Jul 2024</div>
+            <div class="current-time">12:34</div>
+            <div id="current-weather-icon">
+              <img
+                src="img/cloudy_icon.png"
+                alt="cloudy icon"
+                class="big-weather-icon"
+              />
+            </div>
+            <div class="current-description">Scattered Showers</div>
+            <div class="current-temperature">27°</div>
+            <div class="current-temperature-range">
+              <div class="current-temp-high">H: 28</div>
+              <div class="current-temp-low">L: 23</div>
+            </div>
+            <div class="current-conditions-section">
+              <div class="current-wind">
+                <div>
+                  <img
+                    src="img/wind_icon.png"
+                    alt="wind icon"
+                    class="current-conditions"
+                  />
+                </div>
+                <div>2.57km/h</div>
+              </div>
+              <div class="current-humidity">
+                <div>
+                  <img
+                    src="img/humidity_icon.png"
+                    alt="humidity icon"
+                    class="current-conditions"
+                  />
+                </div>
+                <div>53%</div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div>
-          <div>Tues ⛅ Partly Cloudy 19° / 16</div>
-        </div>
-        <div>
-          <div>Wed ⛅ Partly Cloudy 19° / 16</div>
-        </div>
-        <div>
-          <div>Thurs ⛅ Partly Cloudy 19° / 16</div>
-        </div>
-        <div>
-          <div>Fri ⛅ Partly Cloudy 19° / 16</div>
-        </div>
-        <div>
-          <div>Sat ⛅ Partly Cloudy 19° / 16</div>
-        </div>
-        <div>
-          <div>Sun ⛅ Partly Cloudy 19° / 16</div>
-        </div>
-        <div>
-          <div>Mon ⛅ Partly Cloudy 19° / 16</div>
-        </div>
-        <div>
-          <div>Tues ⛅ Partly Cloudy 19° / 16</div>
+          <div>
+            <div class="forecast-data">
+              <div>
+                <img
+                  src="img/partly_cloudy_icon.png"
+                  alt="partly cloudy icon"
+                  class="big-weather-icon"
+                />
+              </div>
+              <div class="tomorrow">
+                <div id="tomorrow">Tomorrow</div>
+                <div>19° / 17</div>
+                <div>Partly Cloudy</div>
+              </div>
+            </div>
+            <div class="forecast-data">
+              <div>Tues</div>
+              <div>⛅</div>
+              <div>Partly Cloudy</div>
+              <div>19° / 16</div>
+            </div>
+            <div class="forecast-data">
+              <div>Wed</div>
+              <div>⛅</div>
+              <div>Partly Cloudy</div>
+              <div>19° / 16</div>
+            </div>
+            <div class="forecast-data">
+              <div>Thurs</div>
+              <div>⛅</div>
+              <div>Partly Cloudy</div>
+              <div>19° / 16</div>
+            </div>
+            <div class="forecast-data">
+              <div>Fri</div>
+              <div>⛅</div>
+              <div>Partly Cloudy</div>
+              <div>19° / 16</div>
+            </div>
+            <div class="forecast-data">
+              <div>Sat</div>
+              <div>⛅</div>
+              <div>Partly Cloudy</div>
+              <div>19° / 16</div>
+            </div>
+            <div class="forecast-data">
+              <div>Sun</div>
+              <div>⛅</div>
+              <div>Partly Cloudy</div>
+              <div>19° / 16</div>
+            </div>
+          </div>
         </div>
       </main>
 

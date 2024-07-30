@@ -16,11 +16,137 @@ body {
     #5863e8
   );
 }
+a {
+  color: #3b3eae;
+}
+header {
+}
+main {
+  padding: 30px 0 30px 0;
+}
+img.big-weather-icon {
+  width: 150px;
+}
+img.current-conditions {
+  width: 50px;
+}
+
+footer {
+  font-size: 13px;
+  text-align: center;
+}
 .weather-app {
   background: #919ff8;
   max-width: 600px;
   margin: 40px auto;
   padding: 30px;
-  color: #5356ea;
+  color: #474acb;
   border-radius: 20px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.35);
+}
+.search-form {
+  text-align: center;
+}
+.search-form-input {
+  background: #c6cffe;
+  border: 1px solid #7d8ad8;
+  border-radius: 5px;
+  width: 80%;
+  font-size: 16px;
+  padding: 10px;
+}
+.search-form-button {
+  background: #474acb;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  margin-left: 5px;
+  transition: all 200ms ease-in-out;
+}
+.search-form-button:hover {
+  background: #6f7cf2;
+  color: #3b3eae;
+  cursor: pointer;
+}
+
+.weather-data {
+  display: flex;
+  justify-content: space-around;
+}
+.current-weather {
+  background: #a6b3fb;
+  border: 2px solid #d1d9fe;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  transition: all 200ms ease-in-out;
+}
+.current-city {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 48px;
+}
+.current-day {
+  font-size: 30px;
+  padding: 10px 0;
+}
+.current-date,
+.current-time {
+  font-size: 18px;
+}
+.current-time {
+  padding-top: 10px;
+}
+.current-conditions-section {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.current-temperature {
+  font-size: 40px;
+  padding: 20px 0;
+}
+.current-temperature-range {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 20px;
+}
+.current-humidity,
+.current-wind {
+  margin-top: 20px;
+}
+
+.forecast-data {
+  background: #a6b3fb;
+  border: 2px solid #d1d9fe;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 5px;
+  transition: all 200ms ease-in-out;
+}
+.forecast-data:hover,
+.current-weather:hover {
+  background: #6f7cf2;
+  border: 2px solid #6a75b8;
+  color: #d1d9fe;
+  cursor: pointer;
+}
+.big-weather-icon {
+  margin: 0;
+}
+.forecast-data {
+  display: flex;
+  justify-content: space-around;
+}
+.tomorrow {
+  padding: 40px 0 0 10px;
+  text-align: center;
+}
+
+#tomorrow {
+  font-size: 24px;
 }
