@@ -23,6 +23,7 @@
             placeholder="Enter a city"
             required
             class="search-form-input"
+            id="search-form-input"
           />
           <input type="submit" value="Search" class="search-form-button" />
         </form>
@@ -30,18 +31,20 @@
       <main>
         <div class="weather-data">
           <div class="current-weather">
-            <div class="current-city">Portland</div>
-            <div class="current-day">Monday</div>
-            <div class="current-date">29 Jul 2024</div>
-            <div class="current-time">12:34</div>
-            <div id="current-weather-icon">
+            <h1 class="current-city" id="current-city">Portland</h1>
+
+            <p class="current-day">Monday</p>
+            <p class="current-date">29 Jul 2024</p>
+            <p class="current-time">12:34</p>
+            <div class="current-weather-description">
               <img
                 src="img/cloudy_icon.png"
                 alt="cloudy icon"
                 class="big-weather-icon"
               />
+
+              <p class="current-description">Scattered Showers</p>
             </div>
-            <div class="current-description">Scattered Showers</div>
             <div class="current-temperature">27°</div>
             <div class="current-temperature-range">
               <div class="current-temp-high">H: 28</div>
