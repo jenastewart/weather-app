@@ -34,9 +34,9 @@
           <div class="current-weather">
             <h1 class="current-city" id="current-city"></h1>
 
-            <p class="current-day">Monday</p>
-            <p class="current-date">29 Jul 2024</p>
-            <p class="current-time">12:34</p>
+            <p class="current-day" id="current-day"></p>
+            <p class="current-date" id="current-date"></p>
+            <p class="current-time" id="time"></p>
             <div class="current-weather-description">
               <img
                 src="img/cloudy_icon.png"
@@ -44,11 +44,16 @@
                 class="big-weather-icon"
               />
 
-              <p class="current-description">Scattered Showers</p>
+              <p class="current-description" id="current-description"></p>
             </div>
             <div class="current-temperature">
               <div><h2 id="current-temperature"></h2></div>
-              <div><p id="current-temperature-units">°F / °C</p></div>
+              <div>
+                <p id="current-temperature-units">
+                  <span id="imperial-unit">°F</span> /
+                  <span id="metric-unit">°C</span>
+                </p>
+              </div>
             </div>
             <div class="current-temperature-range">
               <div class="current-temp-high"><p>H: 28°</p></div>
@@ -63,7 +68,9 @@
                     class="current-conditions"
                   />
                 </div>
-                <div>2.57km/h</div>
+                <div>
+                  <p id="wind-speed"><span id="wind-speed-unit"></span></p>
+                </div>
               </div>
               <div class="current-humidity">
                 <div>
@@ -73,7 +80,7 @@
                     class="current-conditions"
                   />
                 </div>
-                <div>53%</div>
+                <div><p id="humidity"></p></div>
               </div>
             </div>
           </div>
