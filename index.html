@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
@@ -31,7 +32,7 @@
       <main>
         <div class="weather-data">
           <div class="current-weather">
-            <h1 class="current-city" id="current-city">Portland</h1>
+            <h1 class="current-city" id="current-city"></h1>
 
             <p class="current-day">Monday</p>
             <p class="current-date">29 Jul 2024</p>
@@ -45,10 +46,13 @@
 
               <p class="current-description">Scattered Showers</p>
             </div>
-            <div class="current-temperature">27°</div>
+            <div class="current-temperature">
+              <div><h2 id="current-temperature"></h2></div>
+              <div><p id="current-temperature-units">°F / °C</p></div>
+            </div>
             <div class="current-temperature-range">
-              <div class="current-temp-high">H: 28</div>
-              <div class="current-temp-low">L: 23</div>
+              <div class="current-temp-high"><p>H: 28°</p></div>
+              <div class="current-temp-low"><p>L: 23°</p></div>
             </div>
             <div class="current-conditions-section">
               <div class="current-wind">
@@ -84,7 +88,7 @@
               </div>
               <div class="tomorrow">
                 <div id="tomorrow">Tomorrow</div>
-                <div>19° / 17</div>
+                <div>19° / 17°</div>
                 <div>Partly Cloudy</div>
               </div>
             </div>
@@ -92,37 +96,37 @@
               <div>Tues</div>
               <div>⛅</div>
               <div>Partly Cloudy</div>
-              <div>19° / 16</div>
+              <div>19° / 16°</div>
             </div>
             <div class="forecast-data">
               <div>Wed</div>
               <div>⛅</div>
               <div>Partly Cloudy</div>
-              <div>19° / 16</div>
+              <div>19° / 16°</div>
             </div>
             <div class="forecast-data">
               <div>Thurs</div>
               <div>⛅</div>
               <div>Partly Cloudy</div>
-              <div>19° / 16</div>
+              <div>19° / 16°</div>
             </div>
             <div class="forecast-data">
               <div>Fri</div>
               <div>⛅</div>
               <div>Partly Cloudy</div>
-              <div>19° / 16</div>
+              <div>19° / 16°</div>
             </div>
             <div class="forecast-data">
               <div>Sat</div>
               <div>⛅</div>
               <div>Partly Cloudy</div>
-              <div>19° / 16</div>
+              <div>19° / 16°</div>
             </div>
             <div class="forecast-data">
               <div>Sun</div>
               <div>⛅</div>
               <div>Partly Cloudy</div>
-              <div>19° / 16</div>
+              <div>19° / 16°</div>
             </div>
           </div>
         </div>
