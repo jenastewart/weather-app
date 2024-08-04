@@ -126,7 +126,6 @@ footer {
 .current-temperature {
   display: flex;
   justify-content: center;
-  gap: 5px;
   font-size: 32px;
   margin: 25px 0;
 }
@@ -152,7 +151,8 @@ footer {
   margin: 5px;
   transition: all 200ms ease-in-out;
 }
-.forecast-data:hover {
+.forecast-data:hover,
+.current-weather:hover {
   background: #6f7cf2;
   border: 2px solid #6a75b8;
   color: #d1d9fe;

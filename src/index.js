@@ -5,20 +5,28 @@ function updateWeatherData(response) {
   let descriptionElement = document.querySelector("#current-description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind-speed");
-  let timeElement = document.querySelector("#time");
+  let timeElement = document.querySelector("#current-day");
   let date = new Date(response.data.time * 1000);
 
+  let iconElement = document.querySelector("#icon");
+
   cityElement.innerHTML = response.data.city;
-  timeElement.innerHTML = formatDate(date);
+  timeElement.innerHTML = formatDay(response.data.time);
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${response.data.wind.speed}m/h`;
   temperatureElement.innerHTML = Math.round(temperature);
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="big-weather-icon" />`;
 }
 
-function formatDate(date) {
+function formatDay(date) {
+  let newDate = new Date(date);
   let minutes = date.getMinutes();
   let hours = date.getHours();
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 
   let days = [
     "Sunday",
@@ -30,11 +38,7 @@ function formatDate(date) {
     "Saturday",
   ];
 
-  let day = days[date.getDay()];
-
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+  let day = days[newDate.getDay()];
 
   return `${day} ${hours}:${minutes}`;
 }
@@ -43,23 +47,6 @@ function searchCity(city) {
   let apiKey = "a17bt048aac153ed9acb6efaf1a6aobf";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(updateWeatherData);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  adjustFontSize();
-});
-
-function adjustFontSize() {
-  let cityNameElement = document.getElementById("#current-city");
-  let maxLength = 14;
-  let fontSizeMultiplier = 0.9;
-
-  if (cityNameElement.textContent.length > maxLength) {
-    let calculatedFontSize = fontSizeMultiplier * maxLength;
-    cityNameElement.style.fontSize - `${calculatedFontSize}px`;
-  } else {
-    cityNameElement.style.fontSize = "";
-  }
 }
 
 function search(event) {
