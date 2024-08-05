@@ -6,12 +6,15 @@ function updateWeatherData(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind-speed");
   let dayElement = document.querySelector("#current-day");
+  let dateElement = document.querySelector("#current-date");
   let timeElement = document.querySelector("#current-time");
   let date = new Date(response.data.time * 1000);
 
   cityElement.innerHTML = response.data.city;
-  timeElement.innerHTML = `${date.getHours()}:${date.getMinutes()}`;
   dayElement.innerHTML = formatDay(date);
+  dateElement.innerHTML = formatDate(date);
+  timeElement.innerHTML = formatTime(date);
+
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${response.data.wind.speed}m/h`;
@@ -19,7 +22,7 @@ function updateWeatherData(response) {
 }
 
 function formatDay(date) {
-  const days = [
+  let days = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -32,13 +35,35 @@ function formatDay(date) {
   return day;
 }
 
+function formatTime(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+}
+
 function formatDate(date) {
-  const formattedDate = new Date(date);
-  const options = {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  };
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let day = date.getDate();
+  let month = months[date.getMonth()];
+  let year = date.getFullYear();
+
   return `${day} ${month} ${year}`;
 }
 
