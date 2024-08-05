@@ -5,26 +5,17 @@ function updateWeatherData(response) {
   let descriptionElement = document.querySelector("#current-description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind-speed");
-  let date = new Date(response.data.time * 1000);
-
-  formatDay(date);
-  formatDate(date);
-  formatTime(date);
-
-  let iconElement = document.querySelector("#icon");
-  let dateElement = document.querySelector("#current-date");
   let dayElement = document.querySelector("#current-day");
   let timeElement = document.querySelector("#current-time");
+  let date = new Date(response.data.time * 1000);
 
   cityElement.innerHTML = response.data.city;
+  timeElement.innerHTML = `${date.getHours()}:${date.getMinutes()}`;
+  dayElement.innerHTML = formatDay(date);
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${response.data.wind.speed}m/h`;
   temperatureElement.innerHTML = Math.round(temperature);
-  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="big-weather-icon" />`;
-  timeElement.innerHTML = formatTime(newTime);
-  dateElement.innerHTML = formatDate(date);
-  dayElement.innerHTML = formatDay(date);
 }
 
 function formatDay(date) {
@@ -37,19 +28,8 @@ function formatDay(date) {
     "Friday",
     "Saturday",
   ];
-  const dayOfWeek = days[date.getDay()];
-  return dayOfWeek;
-}
-
-function formatTime(date) {
-  let minutes = date.getMinutes();
-  let hours = date.getHours();
-
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  let newTime = `${hours}:${minutes}`;
-  return newTime;
+  let day = days[date.getDay()];
+  return day;
 }
 
 function formatDate(date) {
