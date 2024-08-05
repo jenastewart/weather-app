@@ -39,6 +39,9 @@ p#current-temperature-units {
 img.big-weather-icon {
   width: 150px;
 }
+img#current-weather-icon {
+  width: 200px;
+}
 img.current-conditions {
   width: 40px;
 }
@@ -79,7 +82,6 @@ footer {
 }
 .search-form-button:hover {
   background: #6f7cf2;
-
   cursor: pointer;
 }
 
@@ -99,7 +101,7 @@ footer {
 
 .current-city {
   margin: 0;
-  font-size: 38px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 48px;
   white-space: nowrap;
@@ -107,14 +109,13 @@ footer {
   text-overflow: ellipsis;
 }
 .current-day {
-  font-size: 30px;
+  font-size: 32px;
   padding: 10px 0;
 }
 .current-date,
 .current-time {
-  font-size: 18px;
-}
-.current-time {
+  font-size: 20px;
+  line-height: 24px;
   padding-top: 10px;
 }
 
@@ -126,6 +127,7 @@ footer {
 .current-temperature {
   display: flex;
   justify-content: center;
+  gap: 10px;
   font-size: 32px;
   margin: 25px 0;
 }
@@ -135,11 +137,11 @@ footer {
   gap: 20px;
   text-align: center;
   font-size: 28px;
-  line-height: 38px;
+  padding: 10px 0;
 }
 .current-humidity,
 .current-wind {
-  margin-top: 20px;
+  margin-top: 25px;
   font-size: 20px;
 }
 
